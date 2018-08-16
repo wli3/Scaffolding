@@ -17,30 +17,30 @@
 <div>
     <h4>Product</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="row">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Name, new { @class = "col-sm-2"})
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Name, new { @class = "col-sm-10"})
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Price)
+            @Html.DisplayNameFor(model => model.Price, new { @class = "col-sm-2"})
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Price)
+            @Html.DisplayFor(model => model.Price, new { @class = "col-sm-10"})
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Manufacturer)
+            @Html.DisplayNameFor(model => model.Manufacturer, new { @class = "col-sm-2"})
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Manufacturer.ManufacturerID)
+            @Html.DisplayFor(model => model.Manufacturer.ManufacturerID, new { @class = "col-sm-10"})
         </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="ProductID" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
