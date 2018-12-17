@@ -20,13 +20,6 @@ steps:
     inputs:
       version: '2.2.100'
 
-  - task: DotNetCoreCLI@2  
-    inputs:
-      command: custom
-      custom: tool
-      arguments: install --tool-path . nbgv
-    displayName: Install NBGV tool
-
   - task: DotNetCoreInstaller@0
     inputs:
       version: '3.0.100-preview-009812'
